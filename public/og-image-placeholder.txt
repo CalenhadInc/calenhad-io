@@ -1,0 +1,24 @@
+OG Image Specs for Calenhad
+
+Dimensions: 1200x630px
+Background: Black (#000000)
+Text: White (#FFFFFF) + Cyan (#00FFFF)
+
+Content:
+---
+CALENHAD
+MESH NETWORK
+INFRASTRUCTURE
+
+→ WE BUILD MESH NETWORKS
+→ WE CAN HELP YOU BUILD YOURS
+
+contact@calenhad.io
+---
+
+You can create this image using:
+1. Figma/Canva with these specs
+2. Or use a service like https://og-image.vercel.app/
+3. Font: Inter Black (900 weight), uppercase
+
+Save as: public/og-image.png

@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#000000"/>
+  <!-- Mesh Pattern Background -->
+  <path d="M0 0L1200 630M1200 0L0 630" stroke="#00ffff" stroke-width="1" stroke-opacity="0.2"/>
+  <circle cx="600" cy="315" r="300" stroke="#00ffff" stroke-width="1" stroke-opacity="0.1"/>
+  
+  <!-- Logo -->
+  <g transform="translate(600, 315)">
+    <path d="M124 -124C94 -154 49 -176 0 -176C-97.206 -176 -176 -97.206 -176 0C-176 97.206 -97.206 176 0 176C49 176 94 154 124 124" stroke="white" stroke-width="70" stroke-linecap="square"/>
+    <circle cx="124" cy="0" r="40" fill="#00ffff"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="520" font-family="Arial, sans-serif" font-weight="900" font-size="64" fill="white" text-anchor="middle" style="text-transform: uppercase; letter-spacing: -0.02em;">CALENHAD</text>
+  <text x="600" y="570" font-family="Arial, sans-serif" font-weight="400" font-size="24" fill="#00ffff" text-anchor="middle" style="text-transform: uppercase; letter-spacing: 0.1em;">MESH NETWORK INFRASTRUCTURE</text>
+</svg>
+

@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  /* Brutalist Colors - Stark and Minimal */
+  --brand-primary: #000000;
+  --brand-secondary: #000000;
+  --brand-accent: #00ffff;
+  --brand-accent-light: #00ffff;
+
+  /* Mesh Network Visualization Colors */
+  --mesh-node: #00ffff;
+  --mesh-connection: #00ffff;
+
+  /* Semantic Colors */
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #666666;
+  --border: #000000;
+}
+
+@theme inline {
+  /* Brand Colors */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-light: var(--brand-accent-light);
+
+  /* Mesh Colors */
+  --color-mesh-node: var(--mesh-node);
+  --color-mesh-connection: var(--mesh-connection);
+
+  /* Semantic Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  /* Typography */
+  --font-sans: var(--font-inter);
+
+  /* Spacing for consistent rhythm */
+  --section-padding-y: 4rem;
+  --section-padding-y-md: 6rem;
+  --section-padding-y-lg: 8rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700; /* Bold by default for brutalist look */
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus visible styles for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--brand-accent);
+  outline-offset: 0;
+}
+
+/* Brutalist Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+/* Remove all default margins for tighter control */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Brutalist borders - always solid black, never subtle */
+hr {
+  border: none;
+  border-top: 3px solid var(--foreground);
+}
