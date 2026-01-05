@@ -1,0 +1,7 @@
+{
+  "buildCommand": "bun run build",
+  "outputDirectory": "out",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": true
+}
