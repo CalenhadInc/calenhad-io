@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Header, Footer } from "@/components/layout";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -11,20 +17,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://calenhad.io"),
-  title: {
-    default: "Calenhad - Mesh Network Infrastructure",
-    template: "%s | Calenhad",
-  },
+  title: "Calenhad",
   description:
-    "From product development to deployment, we help startups harness the power of mesh network technology. Expert consulting services for mesh network infrastructure.",
-  keywords: [
-    "mesh network",
-    "mesh network consulting",
-    "IoT networks",
-    "wireless mesh",
-    "network infrastructure",
-    "Waypoint",
-  ],
+    "Most ads are guesses. Calenhad isn't. Request early access.",
   authors: [{ name: "Calenhad" }],
   icons: {
     icon: "/icon.svg",
@@ -35,24 +30,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://calenhad.io",
     siteName: "Calenhad",
-    title: "Calenhad - Mesh Network Infrastructure",
-    description:
-      "Expert mesh network consulting for startups and businesses. We built Waypoint, now we can help you build yours.",
+    title: "Calenhad",
+    description: "Most ads are guesses. Calenhad isn't.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image.svg",
         width: 1200,
         height: 630,
-        alt: "Calenhad - Mesh Network Infrastructure",
+        alt: "Calenhad",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Calenhad - Mesh Network Infrastructure",
-    description:
-      "Expert mesh network consulting for startups and businesses.",
-    images: ["/og-image.png"],
+    title: "Calenhad",
+    description: "Most ads are guesses. Calenhad isn't.",
+    images: ["/opengraph-image.svg"],
   },
 };
 
@@ -62,12 +55,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
