@@ -12,10 +12,16 @@ export default function Home() {
     if (!email || submitting) return;
     setSubmitting(true);
 
-    // Replace with your actual endpoint (Formspree, Mailchimp, etc.)
-    // For now, this simulates a successful submission
-    await new Promise((resolve) => setTimeout(resolve, 600));
-    setSubmitted(true);
+    try {
+      await fetch("https://formsubmit.co/ajax/ed@eddydavies.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email, _subject: "Calenhad — New access request" }),
+      });
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    }
     setSubmitting(false);
   }
 
