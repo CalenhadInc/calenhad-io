@@ -13,10 +13,10 @@ export default function Home() {
     setSubmitting(true);
 
     try {
-      await fetch("https://formsubmit.co/ajax/ed@eddydavies.com", {
+      await fetch("/api/request-access", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ email, _subject: "Calenhad — New access request" }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
       setSubmitted(true);
     } catch {
