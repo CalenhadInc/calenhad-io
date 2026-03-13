@@ -37,8 +37,8 @@ export default function Home() {
       </section>
 
       {/* Middle section */}
-      <section className="relative px-6 py-32 sm:py-40 md:py-48">
-        <div className="mx-auto flex max-w-2xl flex-col gap-24 sm:gap-32 md:gap-40">
+      <section className="relative flex flex-col items-center px-6 py-32 sm:py-40 md:py-48">
+        <div className="flex max-w-3xl flex-col items-center gap-24 text-center sm:gap-32 md:gap-40">
           <p className="font-serif text-warm-300 animate-fade-up text-2xl leading-relaxed sm:text-3xl md:text-4xl">
             Before a single word of copy is written, we already know why
             she&rsquo;ll buy.
@@ -57,8 +57,8 @@ export default function Home() {
       </section>
 
       {/* Close — Request access */}
-      <section className="relative px-6 pb-32 pt-16 sm:pb-40 md:pb-48">
-        <div className="mx-auto max-w-lg text-center">
+      <section className="relative flex flex-col items-center px-6 pb-32 pt-16 sm:pb-40 md:pb-48">
+        <div className="max-w-lg text-center">
           <h2 className="font-serif text-warm-100 animate-fade-up mb-4 text-3xl font-light sm:text-4xl">
             Request Access
           </h2>
