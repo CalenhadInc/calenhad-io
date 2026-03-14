@@ -10,12 +10,17 @@ export async function POST(request: Request) {
 
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  await resend.emails.send({
+  const { error } = await resend.emails.send({
     from: "Calenhad <onboarding@resend.dev>",
-    to: "ed@eddydavies.com",
+    to: "eddy@calenhad.io",
     subject: "Calenhad — New access request",
     text: `New access request from: ${email}`,
   });
+
+  if (error) {
+    console.error("Resend error:", error);
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
 
   return NextResponse.json({ ok: true });
 }
